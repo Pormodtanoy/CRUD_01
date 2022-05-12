@@ -1,6 +1,6 @@
 // Credit: 
 
-1. Code.gs
+//1. Code.gs
 
 function doGet(e){
   return HtmlService
@@ -14,11 +14,11 @@ function include(filename){
       .getContent();
 };
 
-var ss = SpreadsheetApp.openById("1ewcf6d8WkcPgGUwWcDoOdhGk57zAMhnVl_9TqlSTrD0");
-var sheet = ss.getSheetByName("Sheet1");
+var ss = SpreadsheetApp.openById("xxxx");
+var sheet = ss.getSheetByName("xxxx");
 
 
-//newEntry function 
+// 1. ฟังชั่นหน้าบันทึกข้อมูล newEntry function 
 function newEntry(sd){
   var zeroPad = (num, places) => String(num).padStart(places, '0')
   var rnd =Math.floor(Math.random() * 500) + 500;
