@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<center>
+<style>
+table, th, td {
+  border-collapse: collapse;
+  font-family:times;
+}
+td,th{width:50%;}
+input:focus,select:focus,
+textarea:focus {
+  outline: 1px dashed green;
+}
+textarea{
+width:98%;
+height:100px;
+font-family:times;
+border:1px solid black;}
+select,input{
+width:95%;
+font-family:times;
+padding:1px;
+border:1px solid black;
+}
+input:hover{
+background:yellow;}
+button{width:15%;
+font-family:times;}
+button:focus {
+  outline: 1px dashed green;}
+  button:hover{
+background:green;color:white;}
+</style>
+<body>
+<?!= include('entry.js') ?>
+<?!= include('read.js') ?>
+<?!= include('update.js') ?>
+<?!= include('delete.js') ?>
+<table border=0 width=600px>
+<th>CRUD WEB APP: Sunrise IT Education<hr></th>
+<th><input id="id" placeholder="Enter ID to Search,Update or Delete Data"><hr></th>
+</tr>
+<tr>
+<td>Name:<input id="name"placeholder="Name"required></td>
+<td>Father Name:<input id="fname"placeholder="Father Name"required></td></tr>
+<td>Mobile No:<input id="mo"placeholder="Mobile NO"required></td>
+<td>Email id:<input id="eid"placeholder="Email ID"required></td>       
+</tr>
+<tr>
+<td>Gender:
+
+<select id="selected">
+<option>Select </option>
+<option value="Male">Male </option>
+<option value="Female">Female </option>
+</select>
+
+</td>
+<td>DOB:<input type="date" id="date"></td>       
+</tr>
+<tr>
+<td colspan="2">Remarks:
+<textarea placeholder="Write something....."id="note"></textarea></td>    
+</tr>
+<tr>
+<td colspan="2"align="center">
+<button onclick="submit()">New Entry</button>
+<button onclick="read()">Search Data</button>
+<button onclick="update()">Update</button>
+<button onclick="delet()">Delete</button>
+</td>    
+</tr>
+
+<tr>
+<td colspan="2">Message:<b  id="result"></b></td>    
+</tr>
+
+</table>  
+</body>
+</center>
+</html>
